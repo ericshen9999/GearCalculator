@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
    <head>
       <meta charset="UTF-8">
       <link rel="stylesheet" href="WebsiteStorage/template.css">
@@ -10,18 +10,36 @@
       <!-- script src = "./src/calculate.go"></script -->
    </head>
    <body>
-      <h2>Epic Seven Gear Calculator</h2>
-      <!--div class = "display text">My new gear calculator</div-->
-      <button type = "button">Calculate</button>
-      <!--h2>Button Styles</h2>
-      <button type="button" class="btn">Basic</button>
-      <button type="button" class="btn btn-default">Default</button>
-      <button type="button" class="btn btn-primary">Primary</button>
-      <button type="button" class="btn btn-success">Success</button>
-      <button type="button" class="btn btn-info">Info</button>
-      <button type="button" class="btn btn-warning">Warning</button>
-      <button type="button" class="btn btn-danger">Danger</button>
-      <button type="button" class="btn btn-link">Link</button-->      
-      <!-- div class="display text">Welcome {{.Name}}, it is {{.Time}}</div -->
+      <center>
+         <h1>Epic Seven Gear Calculator</h1>
+         <div class="downdown">
+         <form action="/store.go">
+            <label for="gear">Main Stat:</label>
+            <select name="main_stat" id="main_stat">
+            <option value="atk"><img src="assets/stat_atk.png">Attack</option>
+            <option value="hp"><img src="assets/stat_hp.png">Health</option>
+            <option value="def">Defense</option>
+            <option value="chd">Critical Hit Damage</option>
+            <option value="chc">Critical Hit Chance</option>
+            <option value="spd">Speed</option>
+            <option value="eff">Effectiveness</option>
+            <option value="efr">Effect Resistance</option>
+            </select>
+            <br><br>
+            <input type="button" value="Add">
+         </form>
+         </div>
+         <!-- button type = "button">Calculate</button -->
+         <!--h2>Button Styles</h2>
+         <button type="button" class="btn">Basic</button>
+         <button type="button" class="btn btn-default">Default</button>
+         <button type="button" class="btn btn-primary">Primary</button>
+         <button type="button" class="btn btn-success">Success</button>
+         <button type="button" class="btn btn-info">Info</button>
+         <button type="button" class="btn btn-warning">Warning</button>
+         <button type="button" class="btn btn-danger">Danger</button>
+         <button type="button" class="btn btn-link">Link</button-->      
+         <!-- div class="display text">Welcome {{.Name}}, it is {{.Time}}</div -->
+      </center>
    </body>
 </html>
