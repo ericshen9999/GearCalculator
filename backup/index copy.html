@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="WebSiteStorage/template.css">
+
+      <!-- The welcome struct (shown in the main.go code) is received within the HTML and we just need to use the . operator and retrieve the information we want -->
+      <title>Epic Seven Gear Calculator</title>
+      <!-- script src = "./src/calculate.go"></script -->
+   </head>
+   <body>
+         <h1>Epic Seven Gear Calculator</h1>
+         <!--div class = "display text">My new gear calculator</div-->
+         <form action="/store.go">
+            <label for="main_stat">Main Stat:</label>
+            <select name="main_stat" id="main_stat">
+               <option value="atk">Attack</option>
+               <option value="hp">Health</option>
+               <option value="def">Defense</option>
+               <option value="chd">Critical Hit Damage</option>
+               <option value="chc">Critical Hit Chance</option>
+               <option value="spd">Speed</option>
+               <option value="eff">Effectiveness</option>
+               <option value="efr">Effect Resistance</option>
+            </select>
+            <input type="number" value="ms"></input><br>
+
+            <label for="sub_stat_1">Sub Stat 1:</label>
+            <select name="sub_stat_1" id="sub_stat_1">
+               <option value="atk">Attack</option>
+               <option value="hp">Health</option>
+               <option value="def">Defense</option>
+               <option value="chd">Critical Hit Damage</option>
+               <option value="chc">Critical Hit Chance</option>
+               <option value="spd">Speed</option>
+               <option value="eff">Effectiveness</option>
+               <option value="efr">Effect Resistance</option>
+            </select>
+            <input type="number" value="ss1"></input><br>
+
+            <label for="sub_stat_2">Sub Stat 2:</label>
+            <select name="sub_stat_2" id="sub_stat_2">
+               <option value="atk">Attack</option>
+               <option value="hp">Health</option>
+               <option value="def">Defense</option>
+               <option value="chd">Critical Hit Damage</option>
+               <option value="chc">Critical Hit Chance</option>
+               <option value="spd">Speed</option>
+               <option value="eff">Effectiveness</option>
+               <option value="efr">Effect Resistance</option>
+            </select>
+            <input type="number" value="ss2"></input><br>
+
+            <label for="sub_stat_3">Sub Stat 3:</label>
+            <select name="sub_stat_3" id="sub_stat_3">
+               <option value="atk">Attack</option>
+               <option value="hp">Health</option>
+               <option value="def">Defense</option>
+               <option value="chd">Critical Hit Damage</option>
+               <option value="chc">Critical Hit Chance</option>
+               <option value="spd">Speed</option>
+               <option value="eff">Effectiveness</option>
+               <option value="efr">Effect Resistance</option>
+            </select>
+            <input type="number" value="ss3"></input><br>
+
+            <label for="sub_stat_4">Sub Stat 4:</label>
+            <select name="sub_stat_4" id="sub_stat_4">
+               <option value="atk">Attack</option>
+               <option value="hp">Health</option>
+               <option value="def">Defense</option>
+               <option value="chd">Critical Hit Damage</option>
+               <option value="chc">Critical Hit Chance</option>
+               <option value="spd">Speed</option>
+               <option value="eff">Effectiveness</option>
+               <option value="efr">Effect Resistance</option>
+            </select>
+            <input type="number" value="ss4"></input><br>
+            <input type="submit" value="Add Gear"></input><br>
+         </form>
+         <!-- button type = "button">Calculate</button -->
+         <!--h2>Button Styles</h2>
+         <button type="button" class="btn">Basic</button>
+         <button type="button" class="btn btn-default">Default</button>
+         <button type="button" class="btn btn-primary">Primary</button>
+         <button type="button" class="btn btn-success">Success</button>
+         <button type="button" class="btn btn-info">Info</button>
+         <button type="button" class="btn btn-warning">Warning</button>
+         <button type="button" class="btn btn-danger">Danger</button>
+         <button type="button" class="btn btn-link">Link</button-->      
+         <!-- div class="display text">Welcome {{.Name}}, it is {{.Time}}</div -->
+   </body>
+</html>

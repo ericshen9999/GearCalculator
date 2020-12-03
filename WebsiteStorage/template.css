@@ -1,19 +1,66 @@
-body  {
-    min-height:100%;
-    /*background-image: url("/static/stylesheets/background.jpeg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3));*/
-    background-blend-mode: overlay;
-    background-size:cover
+.dropdown {
+   width: 150px;
+   position: relative;
+   display: inline-block;
+
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none
+}
+
+.dropdiv {
+   background-image: url("assets/stat_atk.png");
+   background-repeat: no-repeat;
+   background-position: 3px 5px;
+   background-size: 10px 10px;
+
+   max-width: 150px;
+   padding-left: 16px;
+
+   text-align: left;
+   font-size: 16px;
+
+   border: 1px solid black;
+
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none
  }
- 
- .welcome {
-    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
-    font-size: 3rem;
-    color: aliceblue;
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   min-width: 150px;
+
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none
+}
+
+.dropdown-content label {
+   color: black;
+   padding: 2px 2px;
+   text-decoration: none;
+   display: block;
+   border-top: 1px solid black;
+   border-bottom: 1px solid black;
+   border-left: 1px solid black;
+   border-right: 1px solid black;
  }
- 
- .center {
-    height: 100vh;
-     display: flex;
-     justify-content: center;
-     align-items: center
- }​
+
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+.dropdown-content label:hover {
+   background-color: #D3D3D3;
+}
+
+.desc {
+   display: inline;
+   text-align: right;
+}
