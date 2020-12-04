@@ -1,66 +1,22 @@
-.dropdown {
-   width: 150px;
-   position: relative;
-   display: inline-block;
-
-   -webkit-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none
-}
-
-.dropdiv {
-   background-image: url("assets/stat_atk.png");
-   background-repeat: no-repeat;
-   background-position: 3px 5px;
-   background-size: 10px 10px;
-
-   max-width: 150px;
-   padding-left: 16px;
-
-   text-align: left;
-   font-size: 16px;
-
-   border: 1px solid black;
-
-   -webkit-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none
- }
-
-.dropdown-content {
-   display: none;
-   position: absolute;
-   background-color: #f9f9f9;
-   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-   min-width: 150px;
-
-   -webkit-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none
-}
-
-.dropdown-content label {
-   color: black;
-   padding: 2px 2px;
-   text-decoration: none;
-   display: block;
-   border-top: 1px solid black;
-   border-bottom: 1px solid black;
-   border-left: 1px solid black;
-   border-right: 1px solid black;
- }
-
-.dropdown:hover .dropdown-content {
-   display: block;
-}
-.dropdown-content label:hover {
-   background-color: #D3D3D3;
+body{
+   min-width: 1000px;
 }
 
 .desc {
    display: inline;
    text-align: right;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+ }
+
+ input[type=number] {
+   -moz-appearance: textfield;
+ }
+
+ .level {
+   width: 16px;
 }

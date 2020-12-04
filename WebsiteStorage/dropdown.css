@@ -1,0 +1,260 @@
+.dropdown {
+   position: relative;
+   display: inline-block;
+   padding-bottom: 10px;
+
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none
+}
+
+.dropset {
+   background-image: url("assets/set_atk.png");
+   background-repeat: no-repeat;
+   background-position: 3px 5px;
+   background-size: 10px 10px;
+
+   min-width: 80px;
+   max-width: 80px;
+   padding-left: 16px;
+
+   text-align: left;
+   font-size: 16px;
+
+   border: 1px solid black;
+
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none
+ }
+
+ .dropset-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+    min-width: 98px;
+    max-width: 98px;
+ 
+    z-index: 10;
+ 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+ }
+ 
+ .dropset-content label {
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+    display: block;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+ 
+ .dropdown:hover .dropset-content {
+    display: block;
+ }
+ .dropset-content label:hover {
+    background-color: #D3D3D3;
+ }
+
+ 
+
+ .droptype {
+    background-image: url("assets/gear_wep.png");
+    background-repeat: no-repeat;
+    background-position: 3px 5px;
+    background-size: 10px 10px;
+ 
+    min-width: 68px;
+    max-width: 68px;
+    padding-left: 16px;
+ 
+    text-align: left;
+    font-size: 16px;
+ 
+    border: 1px solid black;
+ 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+  }
+
+  .droptype-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+    min-width: 86px;
+    max-width: 86px;
+ 
+    z-index: 10;
+ 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+ }
+ 
+ .droptype-content label {
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+    display: block;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+ 
+ .dropdown:hover .droptype-content {
+    display: block;
+ }
+ .droptype-content label:hover {
+    background-color: #D3D3D3;
+ }
+
+
+
+  .dropgrade {
+    min-width: 78px;
+    max-width: 78px;
+
+    text-align: left;
+    font-size: 16px;
+ 
+    color: Red;
+    border: 1px solid black;
+ 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+  }
+
+  .dropgrade-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    min-width: 80px;
+    max-width: 80px;
+ 
+    z-index: 10;
+ 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+ }
+ 
+ .dropgrade-content label {
+    padding: 2px 2px;
+    text-decoration: none;
+    display: block;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+ 
+ .dropdown:hover .dropgrade-content {
+    display: block;
+ }
+
+ .dropgrade-content label:hover {
+    background-color: #D3D3D3;
+ }
+
+ .dropgrade-content .epic {
+    color: red;
+ }
+ .dropgrade-content .heroic {
+    color: purple;
+ }
+ .dropgrade-content .rare {
+    color: blue;
+ }
+ .dropgrade-content .uncommon {
+    color: green;
+ }
+ .dropgrade-content .normal {
+    color: gray;
+ }
+
+
+.name {
+    display: inline-block;
+    min-width: 70px;
+    max-width: 70px;
+}
+.dropdiv {
+   display: inline-block;
+
+   background-image: url("assets/stat_atk.png");
+   background-repeat: no-repeat;
+   background-position: 3px 5px;
+   background-size: 10px 10px;
+
+   min-width: 150px;
+   max-width: 150px;
+   padding-left: 16px;
+
+   text-align: left;
+   font-size: 16px;
+
+   border: 1px solid black;
+
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none
+ }
+
+ .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+    min-width: 168px;
+    max-width: 168px;
+
+    top: 20px;
+    right: 0;
+
+    z-index: 10;
+ 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+ }
+ 
+ .dropdown-content label {
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+    display: block;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+ 
+ .show {
+     display: block;
+ }
+ .dropdown-content label:hover {
+    background-color: #D3D3D3;
+ }
