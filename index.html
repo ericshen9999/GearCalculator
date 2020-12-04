@@ -6,6 +6,7 @@
       <link rel="stylesheet" href="WebsiteStorage/template.css">
       <link rel="stylesheet" href="WebsiteStorage/dropdown.css">
       <script src="WebsiteStorage/src/button.js"></script>
+      <script src="WebsiteStorage/src/store.js"></script>
 
       <title>Pekka's E7 Gear Calculator</title>
 
@@ -145,7 +146,7 @@
                   <img src="WebsiteStorage/assets/stat_efr.png" width="10" height="10"/> Effect Resistance
                </label>
             </div>
-            <input class="stat" type="number" id="mstat" name="mstat" min="1" max="99" onkeyup="questionMinMax(this)"/>
+            <input class="stat" type="number" id="mstat" name="mstat" min="1" max="999" onkeyup="questionMinMax(this)"/>
          </div><br>
          <div class="dropdown">
             <div class="name">Sub Stat:</div>
@@ -185,6 +186,7 @@
                   <img src="WebsiteStorage/assets/stat_efr.png" width="10" height="10"/> Effect Resistance
                </label>
             </div>
+            <input class="stat" type="number" id="sstat1" name="sstat1" min="1" max="999" onkeyup="questionMinMax(this)"/>
          </div><br>
          <div class="dropdown">
             <div class="name">Sub Stat:</div>
@@ -224,6 +226,7 @@
                   <img src="WebsiteStorage/assets/stat_efr.png" width="10" height="10"/> Effect Resistance
                </label>
             </div>
+            <input class="stat" type="number" id="sstat2" name="sstat2" min="1" max="999" onkeyup="questionMinMax(this)"/>
          </div><br>
          <div class="dropdown">
             <div class="name">Sub Stat:</div>
@@ -263,6 +266,7 @@
                   <img src="WebsiteStorage/assets/stat_efr.png" width="10" height="10"/> Effect Resistance
                </label>
             </div>
+            <input class="stat" type="number" id="sstat3" name="sstat3" min="1" max="999" onkeyup="questionMinMax(this)"/>
          </div><br>
          <div class="dropdown">
             <div class="name">Sub Stat:</div>
@@ -302,7 +306,9 @@
                   <img src="WebsiteStorage/assets/stat_efr.png" width="10" height="10"/> Effect Resistance
                </label>
             </div>
+            <input class="stat" type="number" id="sstat4" name="sstat4" min="1" max="999" onkeyup="questionMinMax(this)"/>
          </div>
+         <button onclick="store()">Add Me</button>
 
    </body>
 </html>

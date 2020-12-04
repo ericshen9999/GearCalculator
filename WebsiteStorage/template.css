@@ -17,6 +17,10 @@ input::-webkit-inner-spin-button {
    -moz-appearance: textfield;
  }
 
- .level {
+.level {
    width: 16px;
+}
+
+.stat {
+   width: 24px;
 }
