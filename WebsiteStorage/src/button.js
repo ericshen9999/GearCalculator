@@ -34,6 +34,14 @@ function enforceMinMax(val){
  }
 
   function showmenu(name){
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
     var btn = document.getElementById(name);
     btn.classList.toggle("show");
   }
