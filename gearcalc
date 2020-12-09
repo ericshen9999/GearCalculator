@@ -1,0 +1,15 @@
+server {
+  listen 80 default_server;
+  listen [::]:80 default_server;
+  
+  server_name _;
+
+  rewrite ^(/.*)\.html(\?.*)?$ $1$2 permanent;
+  rewrite ^/(.*)/$ /$1 permanent;
+
+  root /var/www/html/gearcalc;
+  index index.html;
+  location / {
+    try_files $uri/index.html $uri.html $uri/ $uri =404;
+  }
+}

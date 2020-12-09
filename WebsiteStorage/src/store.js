@@ -1,4 +1,5 @@
-function store(){
+function storegear(){
+    var id = "001"
     var set = document.getElementById('dropset').innerHTML;
     var type = document.getElementById('droptype').innerHTML;
     var grade = document.getElementById('dropgrade').innerHTML;
@@ -14,7 +15,7 @@ function store(){
     var sstat4 = document.getElementById('dropdiv4').innerHTML;
     var sstat4num = document.getElementById('sstat4').value;
 
-    var output = "Id: " + "???" + "\n" +
+    var output = "Id: " + id + "\n" +
         "Type: " + type + "\n" +
         "Set: " + set + "\n" +
         "Grade: " + grade + "\n" +

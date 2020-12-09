@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="WebsiteStorage/template.css">
+      <link rel="stylesheet" href="WebsiteStorage/sidebar.css">
+      <link rel="stylesheet" href="WebsiteStorage/dropdown.css">
+      <script src="WebsiteStorage/src/user.js"></script>
+      <script src="WebsiteStorage/src/button.js"></script>
+      <script src="WebsiteStorage/src/store.js"></script>
+      <title>Pekka's E7 Gear Calculator</title>
+
+   </head>
+   <body>
+      <div class="sidenav">
+         <img src="WebsiteStorage/assets/lulucapfp.png"><br>
+         <a href="#" class="name" onclick="document.getElementById('id01').style.display='block'">Guest</label>
+         <a href="index" class="link">Home</a>
+         <a href="inventory" class="link">Inventory</a>
+         <a href="heros" class="link">Heros</a>
+         <a href="#optimize" class="link">Optimize</a>
+         <a href="#contact" class="link">Contact</a>
+     </div>
+     <div id="id01" class="login">
+         <form class="login-content animate" action="#" method="post">
+             <div class="container">
+                 <label for="uname"><b>Username</b></label><br>
+                 <input type="text" placeholder="Enter Username" name="uname" required>
+                 <br>
+                 <label for="psw"><b>Password</b></label><br>
+                 <input type="password" placeholder="Enter Password" name="psw" required>
+                 
+                 <button type="submit" class="loginbtn">Login</button>
+             </div>
+             <div class="container" style="background-color:#f1f1f1">
+                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                 <span class="psw" onclick="alertfunc()">Forgot <a href="#">password?</a></span>
+             </div>
+         </form>
+     </div>
+      <div class="page">
+         <h1>Inventory</h1>
+         <div class="dropdown">Set:
+            <div id="dropset" class="dropset">Attack</div>
+            <div class="dropset-content">
+               <label class="atk" onclick="changeButton('dropset','WebsiteStorage/assets/set_atk.png','Attack')">
+                  <img src="WebsiteStorage/assets/set_atk.png" width="16" height="16"/> Attack
+               </label>
+               <label class="cnt" onclick="changeButton('dropset','WebsiteStorage/assets/set_cnt.png','Counter')">
+                  <img src="WebsiteStorage/assets/set_cnt.png" width="16" height="16"/> Counter
+               </label>
+               <label class="cri" onclick="changeButton('dropset','WebsiteStorage/assets/set_cri.png','Critical')">
+                  <img src="WebsiteStorage/assets/set_cri.png" width="16" height="16"/> Critical
+               </label>
+               <label class="def" onclick="changeButton('dropset','WebsiteStorage/assets/set_def.png','Defense')">
+                  <img src="WebsiteStorage/assets/set_def.png" width="16" height="16"/> Defense
+               </label>
+               <label class="des" onclick="changeButton('dropset','WebsiteStorage/assets/set_des.png','Destruction')">
+                  <img src="WebsiteStorage/assets/set_des.png" width="16" height="16"/> Destruction
+               </label>
+               <label class="hit" onclick="changeButton('dropset','WebsiteStorage/assets/set_hit.png','Hit Rate')">
+                  <img src="WebsiteStorage/assets/set_hit.png" width="16" height="16"/> Hit
+               </label>
+               <label class="hp" onclick="changeButton('dropset','WebsiteStorage/assets/set_hp.png','Health')">
+                  <img src="WebsiteStorage/assets/set_hp.png" width="16" height="16"/> Health
+               </label>
+               <label class="imm" onclick="changeButton('dropset','WebsiteStorage/assets/set_imm.png','Immunity')">
+                  <img src="WebsiteStorage/assets/set_imm.png" width="16" height="16"/> Immunity
+               </label>
+               <label class="inj" onclick="changeButton('dropset','WebsiteStorage/assets/set_inj.png','Injury')">
+                  <img src="WebsiteStorage/assets/set_inj.png" width="16" height="16"/> Injury
+               </label>
+               <label class="lif" onclick="changeButton('dropset','WebsiteStorage/assets/set_lif.png','Lifesteal')">
+                  <img src="WebsiteStorage/assets/set_lif.png" width="16" height="16"/> Lifesteal
+               </label>
+               <label class="pen" onclick="changeButton('dropset','WebsiteStorage/assets/set_pen.png','Penetration')">
+                  <img src="WebsiteStorage/assets/set_pen.png" width="16" height="16"/> Penetration
+               </label>
+               <label class="res" onclick="changeButton('dropset','WebsiteStorage/assets/set_res.png', 'Resist')">
+                  <img src="WebsiteStorage/assets/set_res.png" width="16" height="16"/> Resist
+               </label>
+               <label class="rev" onclick="changeButton('dropset','WebsiteStorage/assets/set_rev.png','Revenge')">
+                  <img src="WebsiteStorage/assets/set_rev.png" width="16" height="16"/> Revenge
+               </label>
+               <label class="spd" onclick="changeButton('dropset','WebsiteStorage/assets/set_spd.png','Speed')">
+                  <img src="WebsiteStorage/assets/set_spd.png" width="16" height="16"/> Speed
+               </label>
+               <label class="uni" onclick="changeButton('dropset','WebsiteStorage/assets/set_uni.png','Unity')">
+                  <img src="WebsiteStorage/assets/set_uni.png" width="16" height="16"/> Unity
+               </label>
+            </div>
+         </div>
+         <div class="dropdown">Type:
+            <div id="droptype" class="droptype">Weapon</div>
+            <div class="droptype-content">
+               <label class="atk" onclick="changeButton('droptype','WebsiteStorage/assets/gear_wep.png','Weapon')">
+                  <img src="WebsiteStorage/assets/gear_wep.png" width="10" height="10"/> Weapon
+               </label>
+               <label class="cnt" onclick="changeButton('droptype','WebsiteStorage/assets/gear_hel.png','Helmet')">
+                  <img src="WebsiteStorage/assets/gear_hel.png" width="10" height="10"/> Helmet
+               </label>
+               <label class="cri" onclick="changeButton('droptype','WebsiteStorage/assets/gear_arm.png','Armor')">
+                  <img src="WebsiteStorage/assets/gear_arm.png" width="10" height="10"/> Armor
+               </label>
+               <label class="def" onclick="changeButton('droptype','WebsiteStorage/assets/gear_nec.png','Necklace')">
+                  <img src="WebsiteStorage/assets/gear_nec.png" width="10" height="10"/> Necklace
+               </label>
+               <label class="des" onclick="changeButton('droptype','WebsiteStorage/assets/gear_rin.png','Ring')">
+                  <img src="WebsiteStorage/assets/gear_rin.png" width="10" height="10"/> Ring
+               </label>
+               <label class="hit" onclick="changeButton('droptype','WebsiteStorage/assets/gear_bot.png','Boot')">
+                  <img src="WebsiteStorage/assets/gear_bot.png" width="10" height="10"/> Boot
+               </label>
+            </div>
+         </div>
+         <div class="dropdown">Grade:
+            <div id="dropgrade" class="dropgrade">Epic</div>
+            <div class="dropgrade-content">
+               <label class="epic" onclick="changeButton('dropgrade','#','Epic','Red')">
+                  Epic
+               </label>
+               <label class="heroic" onclick="changeButton('dropgrade','#','Heroic','Purple')">
+                  Heroic
+               </label>
+               <label class="rare" onclick="changeButton('dropgrade','#','Rare','Blue')">
+                  Rare
+               </label>
+               <label class="uncommon" onclick="changeButton('dropgrade','#','Uncommon','Green')">
+                  Uncommon
+               </label>
+               <label class="normal" onclick="changeButton('dropgrade','#','Normal','Gray')">
+                  Normal
+               </label>
+            </div>
+         </div>
+         <label for="level">Level:</label>
+         <input class="level" type="number" id="level" name="level" min="1" max="99" onkeyup="enforceMinMax(this)"/><br>
+         <div class="dropdown">
+            <div class="stat">Main Stat:</div>
+            <div id="dropdiv" class="dropdiv" onclick="showmenu('dropdivcontent')">Attack</div>
+            <div id="dropdivcontent" class="dropdown-content">
+               <label class="hp" onclick="changeButton('dropdiv','WebsiteStorage/assets/stat_spd.png','Speed')">
+                  <img src="WebsiteStorage/assets/stat_spd.png" width="10" height="10"/> Speed
+               </label>
+               <label class="chc" onclick="changeButton('dropdiv','WebsiteStorage/assets/stat_chc.png','Crit Chance')">
+                  <img src="WebsiteStorage/assets/stat_chc.png" width="10" height="10"/> Crit Chance
+               </label>
+               <label class="chd" onclick="changeButton('dropdiv','WebsiteStorage/assets/stat_chd.png','Crit Damage')">
+                  <img src="WebsiteStorage/assets/stat_chd.png" width="10" height="10"/> Crit Damage
+               </label>
+               <label class="attack" onclick="changeButton('dropdiv','WebsiteStorage/assets/stat_atk.png','Attack%')">
+                  <img src="WebsiteStorage/assets/stat_atk.png" width="10" height="10"/> Attack%
+               </label>
+               <label class="attack" onclick="changeButton('dropdiv','WebsiteStorage/assets/stat_atk.png','Attack')">
+                  <img src="WebsiteStorage/assets/stat_atk.png" width="10" height="10"/> Attack
+               </label>
+               <label class="hp" onclick="changeButton('dropdiv','WebsiteStorage/assets/stat_hp.png','Health%')">
+                  <img src="WebsiteStorage/assets/stat_hp.png" width="10" height="10"/> Health%
+               </label>
+               <label class="hp" onclick="changeButton('dropdiv','WebsiteStorage/assets/stat_hp.png','Health')">
+                  <img src="WebsiteStorage/assets/stat_hp.png" width="10" height="10"/> Health
+               </label>
+               <label class="def" onclick="changeButton('dropdiv','WebsiteStorage/assets/stat_def.png','Defense%')">
+                  <img src="WebsiteStorage/assets/stat_def.png" width="10" height="10"/> Defense%
+               </label>
+               <label class="def" onclick="changeButton('dropdiv','WebsiteStorage/assets/stat_def.png','Defense')">
+                  <img src="WebsiteStorage/assets/stat_def.png" width="10" height="10"/> Defense
+               </label>
+               <label class="eff" onclick="changeButton('dropdiv','WebsiteStorage/assets/stat_eff.png','Effectiveness')">
+                  <img src="WebsiteStorage/assets/stat_eff.png" width="10" height="10"/> Effectiveness
+               </label>
+               <label class="efr" onclick="changeButton('dropdiv','WebsiteStorage/assets/stat_efr.png','Effect Resistance')">
+                  <img src="WebsiteStorage/assets/stat_efr.png" width="10" height="10"/> Effect Resistance
+               </label>
+            </div>
+            <input class="stat" type="number" id="mstat" name="mstat" min="1" max="999" onkeyup="questionMinMax(this)"/>
+         </div><br>
+         <div class="dropdown">
+            <div class="stat">Sub Stat:</div>
+            <div id="dropdiv1" class="dropdiv" onclick="showmenu('dropdivcontent1')">Attack</div>
+            <div id="dropdivcontent1" class="dropdown-content">
+               <label class="hp" onclick="changeButton('dropdiv1','WebsiteStorage/assets/stat_spd.png','Speed')">
+                  <img src="WebsiteStorage/assets/stat_spd.png" width="10" height="10"/> Speed
+               </label>
+               <label class="chc" onclick="changeButton('dropdiv1','WebsiteStorage/assets/stat_chc.png','Crit Chance')">
+                  <img src="WebsiteStorage/assets/stat_chc.png" width="10" height="10"/> Crit Chance
+               </label>
+               <label class="chd" onclick="changeButton('dropdiv1','WebsiteStorage/assets/stat_chd.png','Crit Damage')">
+                  <img src="WebsiteStorage/assets/stat_chd.png" width="10" height="10"/> Crit Damage
+               </label>
+               <label class="attack" onclick="changeButton('dropdiv1','WebsiteStorage/assets/stat_atk.png','Attack%')">
+                  <img src="WebsiteStorage/assets/stat_atk.png" width="10" height="10"/> Attack%
+               </label>
+               <label class="attack" onclick="changeButton('dropdiv1','WebsiteStorage/assets/stat_atk.png','Attack')">
+                  <img src="WebsiteStorage/assets/stat_atk.png" width="10" height="10"/> Attack
+               </label>
+               <label class="hp" onclick="changeButton('dropdiv1','WebsiteStorage/assets/stat_hp.png','Health%')">
+                  <img src="WebsiteStorage/assets/stat_hp.png" width="10" height="10"/> Health%
+               </label>
+               <label class="hp" onclick="changeButton('dropdiv1','WebsiteStorage/assets/stat_hp.png','Health')">
+                  <img src="WebsiteStorage/assets/stat_hp.png" width="10" height="10"/> Health
+               </label>
+               <label class="def" onclick="changeButton('dropdiv1','WebsiteStorage/assets/stat_def.png','Defense%')">
+                  <img src="WebsiteStorage/assets/stat_def.png" width="10" height="10"/> Defense%
+               </label>
+               <label class="def" onclick="changeButton('dropdiv1','WebsiteStorage/assets/stat_def.png','Defense')">
+                  <img src="WebsiteStorage/assets/stat_def.png" width="10" height="10"/> Defense
+               </label>
+               <label class="eff" onclick="changeButton('dropdiv1','WebsiteStorage/assets/stat_eff.png','Effectiveness')">
+                  <img src="WebsiteStorage/assets/stat_eff.png" width="10" height="10"/> Effectiveness
+               </label>
+               <label class="efr" onclick="changeButton('dropdiv1','WebsiteStorage/assets/stat_efr.png','Effect Resistance')">
+                  <img src="WebsiteStorage/assets/stat_efr.png" width="10" height="10"/> Effect Resistance
+               </label>
+            </div>
+            <input class="stat" type="number" id="sstat1" name="sstat1" min="1" max="999" onkeyup="questionMinMax(this)"/>
+         </div><br>
+         <div class="dropdown">
+            <div class="stat">Sub Stat:</div>
+            <div id="dropdiv2" class="dropdiv" onclick="showmenu('dropdivcontent2')">Attack</div>
+            <div id="dropdivcontent2" class="dropdown-content">
+               <label class="hp" onclick="changeButton('dropdiv2','WebsiteStorage/assets/stat_spd.png','Speed')">
+                  <img src="WebsiteStorage/assets/stat_spd.png" width="10" height="10"/> Speed
+               </label>
+               <label class="chc" onclick="changeButton('dropdiv2','WebsiteStorage/assets/stat_chc.png','Crit Chance')">
+                  <img src="WebsiteStorage/assets/stat_chc.png" width="10" height="10"/> Crit Chance
+               </label>
+               <label class="chd" onclick="changeButton('dropdiv2','WebsiteStorage/assets/stat_chd.png','Crit Damage')">
+                  <img src="WebsiteStorage/assets/stat_chd.png" width="10" height="10"/> Crit Damage
+               </label>
+               <label class="attack" onclick="changeButton('dropdiv2','WebsiteStorage/assets/stat_atk.png','Attack%')">
+                  <img src="WebsiteStorage/assets/stat_atk.png" width="10" height="10"/> Attack%
+               </label>
+               <label class="attack" onclick="changeButton('dropdiv2','WebsiteStorage/assets/stat_atk.png','Attack')">
+                  <img src="WebsiteStorage/assets/stat_atk.png" width="10" height="10"/> Attack
+               </label>
+               <label class="hp" onclick="changeButton('dropdiv2','WebsiteStorage/assets/stat_hp.png','Health%')">
+                  <img src="WebsiteStorage/assets/stat_hp.png" width="10" height="10"/> Health%
+               </label>
+               <label class="hp" onclick="changeButton('dropdiv2','WebsiteStorage/assets/stat_hp.png','Health')">
+                  <img src="WebsiteStorage/assets/stat_hp.png" width="10" height="10"/> Health
+               </label>
+               <label class="def" onclick="changeButton('dropdiv2','WebsiteStorage/assets/stat_def.png','Defense%')">
+                  <img src="WebsiteStorage/assets/stat_def.png" width="10" height="10"/> Defense%
+               </label>
+               <label class="def" onclick="changeButton('dropdiv2','WebsiteStorage/assets/stat_def.png','Defense')">
+                  <img src="WebsiteStorage/assets/stat_def.png" width="10" height="10"/> Defense
+               </label>
+               <label class="eff" onclick="changeButton('dropdiv2','WebsiteStorage/assets/stat_eff.png','Effectiveness')">
+                  <img src="WebsiteStorage/assets/stat_eff.png" width="10" height="10"/> Effectiveness
+               </label>
+               <label class="efr" onclick="changeButton('dropdiv2','WebsiteStorage/assets/stat_efr.png','Effect Resistance')">
+                  <img src="WebsiteStorage/assets/stat_efr.png" width="10" height="10"/> Effect Resistance
+               </label>
+            </div>
+            <input class="stat" type="number" id="sstat2" name="sstat2" min="1" max="999" onkeyup="questionMinMax(this)"/>
+         </div><br>
+         <div class="dropdown">
+            <div class="stat">Sub Stat:</div>
+            <div id="dropdiv3" class="dropdiv" onclick="showmenu('dropdivcontent3')">Attack</div>
+            <div id="dropdivcontent3"class="dropdown-content">
+               <label class="hp" onclick="changeButton('dropdiv3','WebsiteStorage/assets/stat_spd.png','Speed')">
+                  <img src="WebsiteStorage/assets/stat_spd.png" width="10" height="10"/> Speed
+               </label>
+               <label class="chc" onclick="changeButton('dropdiv3','WebsiteStorage/assets/stat_chc.png','Crit Chance')">
+                  <img src="WebsiteStorage/assets/stat_chc.png" width="10" height="10"/> Crit Chance
+               </label>
+               <label class="chd" onclick="changeButton('dropdiv3','WebsiteStorage/assets/stat_chd.png','Crit Damage')">
+                  <img src="WebsiteStorage/assets/stat_chd.png" width="10" height="10"/> Crit Damage
+               </label>
+               <label class="attack" onclick="changeButton('dropdiv3','WebsiteStorage/assets/stat_atk.png','Attack%')">
+                  <img src="WebsiteStorage/assets/stat_atk.png" width="10" height="10"/> Attack%
+               </label>
+               <label class="attack" onclick="changeButton('dropdiv3','WebsiteStorage/assets/stat_atk.png','Attack')">
+                  <img src="WebsiteStorage/assets/stat_atk.png" width="10" height="10"/> Attack
+               </label>
+               <label class="hp" onclick="changeButton('dropdiv3','WebsiteStorage/assets/stat_hp.png','Health%')">
+                  <img src="WebsiteStorage/assets/stat_hp.png" width="10" height="10"/> Health%
+               </label>
+               <label class="hp" onclick="changeButton('dropdiv3','WebsiteStorage/assets/stat_hp.png','Health')">
+                  <img src="WebsiteStorage/assets/stat_hp.png" width="10" height="10"/> Health
+               </label>
+               <label class="def" onclick="changeButton('dropdiv3','WebsiteStorage/assets/stat_def.png','Defense%')">
+                  <img src="WebsiteStorage/assets/stat_def.png" width="10" height="10"/> Defense%
+               </label>
+               <label class="def" onclick="changeButton('dropdiv3','WebsiteStorage/assets/stat_def.png','Defense')">
+                  <img src="WebsiteStorage/assets/stat_def.png" width="10" height="10"/> Defense
+               </label>
+               <label class="eff" onclick="changeButton('dropdiv3','WebsiteStorage/assets/stat_eff.png','Effectiveness')">
+                  <img src="WebsiteStorage/assets/stat_eff.png" width="10" height="10"/> Effectiveness
+               </label>
+               <label class="efr" onclick="changeButton('dropdiv3','WebsiteStorage/assets/stat_efr.png','Effect Resistance')">
+                  <img src="WebsiteStorage/assets/stat_efr.png" width="10" height="10"/> Effect Resistance
+               </label>
+            </div>
+            <input class="stat" type="number" id="sstat3" name="sstat3" min="1" max="999" onkeyup="questionMinMax(this)"/>
+         </div><br>
+         <div class="dropdown">
+            <div class="stat">Sub Stat:</div>
+            <div id="dropdiv4" class="dropdiv" onclick="showmenu('dropdivcontent4')">Attack</div>
+            <div id="dropdivcontent4" class="dropdown-content">
+               <label class="hp" onclick="changeButton('dropdiv4','WebsiteStorage/assets/stat_spd.png','Speed')">
+                  <img src="WebsiteStorage/assets/stat_spd.png" width="10" height="10"/> Speed
+               </label>
+               <label class="chc" onclick="changeButton('dropdiv4','WebsiteStorage/assets/stat_chc.png','Crit Chance')">
+                  <img src="WebsiteStorage/assets/stat_chc.png" width="10" height="10"/> Crit Chance
+               </label>
+               <label class="chd" onclick="changeButton('dropdiv4','WebsiteStorage/assets/stat_chd.png','Crit Damage')">
+                  <img src="WebsiteStorage/assets/stat_chd.png" width="10" height="10"/> Crit Damage
+               </label>
+               <label class="attack" onclick="changeButton('dropdiv4','WebsiteStorage/assets/stat_atk.png','Attack%')">
+                  <img src="WebsiteStorage/assets/stat_atk.png" width="10" height="10"/> Attack%
+               </label>
+               <label class="attack" onclick="changeButton('dropdiv4','WebsiteStorage/assets/stat_atk.png','Attack')">
+                  <img src="WebsiteStorage/assets/stat_atk.png" width="10" height="10"/> Attack
+               </label>
+               <label class="hp" onclick="changeButton('dropdiv4','WebsiteStorage/assets/stat_hp.png','Health%')">
+                  <img src="WebsiteStorage/assets/stat_hp.png" width="10" height="10"/> Health%
+               </label>
+               <label class="hp" onclick="changeButton('dropdiv4','WebsiteStorage/assets/stat_hp.png','Health')">
+                  <img src="WebsiteStorage/assets/stat_hp.png" width="10" height="10"/> Health
+               </label>
+               <label class="def" onclick="changeButton('dropdiv4','WebsiteStorage/assets/stat_def.png','Defense%')">
+                  <img src="WebsiteStorage/assets/stat_def.png" width="10" height="10"/> Defense%
+               </label>
+               <label class="def" onclick="changeButton('dropdiv4','WebsiteStorage/assets/stat_def.png','Defense')">
+                  <img src="WebsiteStorage/assets/stat_def.png" width="10" height="10"/> Defense
+               </label>
+               <label class="eff" onclick="changeButton('dropdiv4','WebsiteStorage/assets/stat_eff.png','Effectiveness')">
+                  <img src="WebsiteStorage/assets/stat_eff.png" width="10" height="10"/> Effectiveness
+               </label>
+               <label class="efr" onclick="changeButton('dropdiv4','WebsiteStorage/assets/stat_efr.png','Effect Resistance')">
+                  <img src="WebsiteStorage/assets/stat_efr.png" width="10" height="10"/> Effect Resistance
+               </label>
+            </div>
+            <input class="stat" type="number" id="sstat4" name="sstat4" min="1" max="999" onkeyup="questionMinMax(this)"/>
+         </div>
+         <button onclick="storegear()">Add Me</button>
+      </div>
+   </body>
+</html>
