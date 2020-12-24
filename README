@@ -1,1 +1,8 @@
 WIP
+
+This is a website to help with the game "Epic Seven".
+
+TODO List:
+Server to host login as well as SQL database.
+Backup a list of heros.
+Run calculation on gear.
